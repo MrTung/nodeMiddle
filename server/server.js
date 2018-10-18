@@ -29,7 +29,7 @@ app.set('view engine', 'ejs');
 // });
 
 app.get('/', (req, res) => {
-  toolmallHttp(req).then((data) => { 
+  toolmallHttp(req).then((data) => {
     res.send(data);
   }).catch((err) => {
     res.send(err);
@@ -38,8 +38,8 @@ app.get('/', (req, res) => {
 
 //  主页输出 "Hello World"
 app.get('/hello', function (req, res) {
-    console.log("主页 GET 请求");
-    res.send('Hello GET');
+  console.log("主页 GET 请求");
+  res.send('Hello GET');
 })
 
 //  POST 请求
@@ -62,6 +62,23 @@ app.get('/login', function (req, res, next) {
     date: new Date()
   })
 })
+
+/* GET home page. */
+var items = [{ title: '文章1' }, { title: '文章2' }]; 
+
+app.get('/list', function (req, res, next) {
+  res.render('list', {
+    title: '文章列表',
+    items: items
+  });
+});
+
+app.get('/article', function (req, res, next) {
+  res.render('article', {
+    title: '文章列表',
+    message: 'fendo8888'
+  });
+});
 
 //  /list_user 页面 GET 请求
 app.get('/list_user', function (req, res) {
