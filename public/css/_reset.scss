@@ -1,0 +1,314 @@
+@charset "UTF-8";
+/** 全局橙色*/
+
+/** 全局橙色*/
+$global_orange: #ff8422;
+
+/** 全局红色*/
+$global_red:#e3211a;
+
+/** 全局蓝色*/
+$global_blue: #1b6dc5;
+
+/** 全局深黑色*/
+$global_drakgray: #333333;
+
+/** 全局浅黑色*/
+$global_gray :#737373;
+
+/** 全局表头灰色*/
+
+$primary_color: $global_blue;
+$placeholder_color: #acacac;
+$text_color: $global_gray;
+$title_color: $global_drakgray;
+/*  body的背景色， #f5f5f5 */
+$background_gray_color: #f5f5f5;
+$border_color: #eeeeee;
+$global_brown: #ddb084;
+$global_brown_darker: #b7926e;
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+  color: $text_color;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom */
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+  cursor: pointer;
+}
+a:hover{
+  color: $global_blue;
+}
+
+li {
+  list-style: none;
+}
+
+// ::-webkit-scrollbar {
+//   width: 5px;
+//   height: 5px;
+// }
+
+// ::-webkit-scrollbar-track-piece {
+//   background-color: rgba(0, 0, 0, 0.2);
+//   -webkit-border-radius: 6px;
+// }
+
+// ::-webkit-scrollbar-thumb:vertical {
+//   height: 5px;
+//   background-color: rgba(125, 125, 125, 0.7);
+//   -webkit-border-radius: 6px;
+// }
+
+// ::-webkit-scrollbar-thumb:horizontal {
+//   width: 5px;
+//   background-color: rgba(125, 125, 125, 0.7);
+//   -webkit-border-radius: 6px;
+// }
+
+html, body {
+  width: 100%;
+  font-family: 'Microsoft YaHei','微软雅黑',SimHei,tahoma,Arial,'Hiragino Sans GB',宋体,sans-serif;
+  font-size: 12px;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*  工具类 */
+.tm-row:before,
+.tm-row:after {
+  display: table;
+  content: " ";
+}
+
+.tm-row:after {
+  clear: both;
+}
+
+.tm-container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tm-container:before,
+.tm-container:after {
+  display: table;
+  content: " ";
+}
+
+.tm-container:after {
+  clear: both;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.tm-clearfix:before,
+.tm-clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.tm-clearfix:after {
+  clear: both;
+}
+
+.tm-hide {
+  display: none;
+}
+
+.tm-col-half, .tm-col-third, .tm-col-fourth, .tm-col-third2, .tm-col-fifth {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tm-col-half {
+  width: 50%;
+}
+
+.tm-col-third {
+  width: 33.333333%;
+}
+
+.tm-col-third2 {
+  width: 66.666666%;
+}
+
+.tm-col-fourth {
+  width: 25%;
+}
+
+.tm-col-fifth {
+  width: 20%;
+}
+
+.tm-a-inherit {
+  color: inherit;
+}
+
+.tm-a-inherit:hover {
+  color: inherit;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+img.lazyImage {
+
+}
+
+.my-placeholder {
+  color: $placeholder_color;
+}
+
+::-webkit-input-placeholder {
+  color: $placeholder_color;
+}
+
+:-moz-placeholder {
+  color: $placeholder_color;
+}
+
+::-moz-placeholder {
+  color: $placeholder_color;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder_color;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.tm-one-row {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tm-two-row{
+  line-height: 1.3;
+  overflow: hidden;
+  height: 2.6em;
+}
+
+.c-primary {
+  color: $global_blue;
+}
+
+.b-gray-light{
+  background: $background_gray_color;
+}
+.tm-border-right{
+  border-right: 1px solid $border_color;
+}
+.tm-btn{
+  display: inline-block;
+}
+.tm-btn-default{
+  border: 1px solid $border_color;
+  padding: 0 20px;
+  font-size: 14px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: white;
+  line-height: 2;
+  min-width: 56px;
+  &:hover, &.tm-active{
+    border-color: $primary_color;
+    background: $primary_color;
+    color: white;
+  }
+}
+.tm-btn-primary{
+  border: 1px solid $primary_color;
+  padding: 0 20px;
+  font-size: 14px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: white;
+  line-height: 2;
+  min-width:56px;
+  &:hover, &.tm-active{
+    border-color: $primary_color;
+    background: $primary_color;
+    color: white;
+  }
+}
+h2.inherit, h1.inherit, h3.inherit, h4.inherit, h5.inherit, h6.inherit {
+  color: inherit;
+  font-size: inherit;
+  font-weight: 200;
+  line-height: inherit;
+  padding: 0;
+  background: none;
+  text-align: inherit;
+}
+

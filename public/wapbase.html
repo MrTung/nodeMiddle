@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name='apple-itunes-app' content='app-id=1063149962'>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="wap-font-scale" content="no" />
+  <meta name="apple-mobile-web-app-title" content="土猫网">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+
+
+  <link rel=icon type=image/x-icon href="images/favicon.ico" />
+
+  <!--
+    <link rel="stylesheet" type="text/css" href="http://resource.toolmall.com/resource/toolmallPc/resources/tmWap/mui_tm/sass/mui.min.css"/>
+  -->
+  <link rel="stylesheet" type="text/css" href="css/icomoon/style.css" />
+  <link rel="stylesheet" type="text/css" href="wapbase/css/wapbase.css" />
+
+  <style>
+    .tm-about-text a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .tm-row:after,
+    .tm-row:before {
+      clear: both;
+    }
+
+    .tm-row:after {
+      display: table;
+      content: " ";
+    }
+
+    .tm-col-second {
+      float: left;
+      width: 50%;
+    }
+
+    .tm-fangan-area {
+      padding-left: 0.175rem;
+      padding-right: 0.175rem;
+    }
+
+    .tm-fangan-area .tm-col-second {
+      padding-left: 0.175rem;
+      padding-right: 0.175rem;
+      margin-bottom: 0.35rem;
+    }
+
+  </style>
+
+
+  <title>土猫网-企业采购</title>
+  <meta name="keywords" content="阳光采购,工具,五金,五金工具,手动工具,电动工具,工具组套,土猫网,工具包_箱_车,汽修汽保,照明,劳保,电动工具附件_耗材,电子电工_VDE工具" />
+  <meta name="description" content="土猫网(toolmall.com)是一家专卖五金工具的阳光采购平台，其中涉及到手动工具，电动工具，气动工具，汽修工具等五金工具及电动工具，手动工具的各个领域，网站并非纯卖五金工具，电动工具和手动工具更重要的是为用户解决五金工具阳光采购方案。"
+  />
+
+
+</head>
+
+<body>
+  <header class="tm-header">
+    <h1 class="tm-logo">GreatStar 巨星科技 土猫网 企业采购 b.toolmall.com</h1>
+    <a class="icon-zixun2 js-open-kefu"></a>
+  </header>
+  <section class="tm-section">
+    <div class="tm-area tm-area-about">
+      <h4 class="tm-h4" style="padding-top: 0.5em;">客户一致选择土猫网的4大理由是?</h4>
+      <p class="tm-p">
+        土猫网是巨星科技（股票代码002444）倾力打造的专业的五金工具服务商,专注为五金工具类需求的企业级客户、个人用户提供一站式采购解决方案。
+      </p>
+      <br/>
+      <p class="tm-p">
+        客户选择土猫网有四大理由
+        <strong style="color:  red;">“专业、服务、阳光、高效”</strong>：平台汇聚国内外五金工具品牌20000多种产品，配备专业顾问团队，有效解决了绿城、万科、深圳地铁等代表性客户的服务需求。
+      </p>
+      <!-- <h4 class="tm-h4" style="padding-top: 0.5em;">我们有什么?</h4>
+      <p class="tm-p" style="padding-bottom: 1em;">
+        我们有卓越的合作硬件条件，当然我们还有一切为您所想的责任心，我们倾听您的意见，提前为您考虑。而且，我们将您的问题视为我们的挑战。我们将贸易能力、制造商能力、服务能力进行了独特的组合，作为土猫网客户您将从中获得更大的利益。
+      </p>-->
+    </div>
+    <div class="tm-area tm-caigou" style="padding-left: 0.2rem; padding-right: 0.2rem;">
+      <!--专业 服务 阳光 高效-->
+      <div class="tm-caigou-item">
+        <span class="tm-label">专业</span>
+      </div>
+      <div class="tm-caigou-item">
+        <span class="tm-label">服务</span>
+      </div>
+      <div class="tm-caigou-item">
+        <span class="tm-label">阳光</span>
+      </div>
+      <div class="tm-caigou-item">
+        <span class="tm-label">高效</span>
+      </div>
+      <div class="tm-caigou-item" style="font-weight: 600; flex:1.5;">
+        <p>服务热线</p>
+        <p>400-9057-828</p>
+      </div>
+    </div>
+  </section>
+  <section class="tm-section">
+    <div class="tm-area">
+      <form class="tm-base-form">
+        <div class="tm-form-group">
+          <input type="text" name="name" id="it_name" placeholder="姓名" />
+        </div>
+        <div class="tm-form-group">
+          <input type="text" name="phone" id="it_phone" placeholder="电话" />
+        </div>
+        <div class="tm-form-group">
+          <textarea name="content" placeholder="您的需求" id="it_remark" rows="3"></textarea>
+        </div>
+        <div class="tm-form-group" style="margin-top: 0.25rem;">
+          <!--<input class="tm-btn-primary" type="button" id="btn_activitySub" value="提交"/>-->
+          <a class="tm-btn-primary" id="btn_activitySub">提交</a>
+        </div>
+      </form>
+    </div>
+  </section>
+  <div class="tm-area tm-caigou" style="padding-left: 0.2rem; padding-right: 0.2rem;">
+    <div class="tm-caigou-item" style="font-weight: 600; flex:1.5;">
+      <p>我们的产品，覆盖面广</p>
+      <br/>
+      <p>并提供一站式，解决方案</p>
+    </div>
+  </div>
+  <section class="tm-section">
+    <div class="tm-area tm-fenlei-area">
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/3123">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-qidong2"></span>
+        </div>
+        <p class="tm-fenlei-text">耗材\配件</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/3133">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-chizi"></span>
+        </div>
+        <p class="tm-fenlei-text">量具\刀具</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/91">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-zuan"></span>
+        </div>
+        <p class="tm-fenlei-text">电动工具</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/79">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-xianjia"></span>
+        </div>
+        <p class="tm-fenlei-text">手动工具</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/1779">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-qiqiang"></span>
+        </div>
+        <p class="tm-fenlei-text">气动工具</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/97">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-yibiao"></span>
+        </div>
+        <p class="tm-fenlei-text">仪器仪表\电工电子</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/98">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-worker"></span>
+        </div>
+        <p class="tm-fenlei-text">劳防\消防</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/3110">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-lama"></span>
+        </div>
+        <p class="tm-fenlei-text">行业工具\特种工具</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/3158">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-ju"></span>
+        </div>
+        <p class="tm-fenlei-text">机电设备\焊接切割</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/96">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-zhaoming"></span>
+        </div>
+        <p class="tm-fenlei-text">电气照明</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/93">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-chache"></span>
+        </div>
+        <p class="tm-fenlei-text">搬运存储\叉车</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/92">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-sanjiao"></span>
+        </div>
+        <p class="tm-fenlei-text">安防\智能家居</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/3113">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-jingu"></span>
+        </div>
+        <p class="tm-fenlei-text">建筑五金\紧固件</p>
+      </a>
+      <a class="tm-fenlei-item" href="http://m.toolmall.com/list/2382">
+        <div class="tm-fenlei-icon-box">
+          <span class="tm-fenlei-icon icon-penqiang"></span>
+        </div>
+        <p class="tm-fenlei-text">其他</p>
+      </a>
+    </div>
+  </section>
+  <section class="tm-section">
+    <div class="tm-area" style="padding-top:0.7rem; ">
+      <div class="tm-about-title">
+        <span class="tm-about-title-text">我们的能力</span>
+      </div>
+      <div class="tm-about-item">
+        <div class="tm-about-ico">
+          <img src="wapbase/img/wapbase/mynl.png" />
+        </div>
+        <div class="tm-about-text">
+          <p class="tm-about-h">贸易能力</p>
+          <p>
+            <span class="c-primary">供货能力优</span>：供应链强大,时刻保障工具仓储.
+            <br/>
+            <span class="c-primary">采购更高效</span>：阳光透明采购,KA协助配单,省时省力.
+          </p>
+        </div>
+      </div>
+      <div class="tm-about-item tm-about-item-reverse">
+        <div class="tm-about-text">
+          <p class="tm-about-h">制造商能力</p>
+          <p style="text-align: left;">
+            <span class="c-primary">领先生产力</span>：行业领先亚洲乃至世界,产业遍布全球.
+            <br/>
+            <span class="c-primary">自主创新力</span>：701项国内外专利,应对多变市场.
+          </p>
+        </div>
+        <div class="tm-about-ico">
+          <img src="wapbase/img/wapbase/zznl.png" />
+        </div>
+      </div>
+      <div class="tm-about-item">
+        <div class="tm-about-ico">
+          <img src="wapbase/img/wapbase/fwnl.png" />
+        </div>
+        <div class="tm-about-text">
+          <p class="tm-about-h">服务能力</p>
+          <p>
+            <span class="c-primary">优质顾问服务</span>：26年五金工具行业经验.
+            <br/>
+            <span class="c-primary">方案解决专家</span>：提供领域内五金工具采购方案.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="tm-section">
+    <div class="tm-base-title2">
+      <p class="tm-p1">这就是我们土猫网在做的事情</p>
+      <p class="tm-p2">为您公司定制一套行业采购方案</p>
+    </div>
+
+    <!--<div class="tm-area tm-about2-area">
+      <div class="tm-about-item">
+        <div>
+          <img src="wapbase/img/wapbase/fuwu.jpg" />
+        </div>
+      </div>
+    </div>-->
+
+    <div class="tm-area tm-about2-area tm-fangan-area">
+      <div class="tm-row">
+        <div class="tm-col-second">
+          <a href="http://hc.toolmall.com/">
+            <img class="tm-img-responsive" alt="搬运叉车解决方案" src="wapbase/img/wapbase/fuwu_1.png" />
+          </a>
+        </div>
+        <div class="tm-col-second">
+          <a href="http://m.toolmall.com/html/nuclear.html">
+            <img class="tm-img-responsive" alt="职业健康及个人防护解决方案" src="wapbase/img/wapbase/fuwu_2.png" />
+          </a>
+        </div>
+        <div class="tm-col-second">
+          <a href="http://m.toolmall.com/html/building.html">
+            <img class="tm-img-responsive" alt="房产建筑装修行业工具解决方案" src="wapbase/img/wapbase/fuwu_3.png" />
+          </a>
+        </div>
+        <div class="tm-col-second">
+          <a href="http://m.toolmall.com/html/property.html">
+            <img class="tm-img-responsive" alt="物业工具解决方案" src="wapbase/img/wapbase/fuwu_4.png" />
+          </a>
+        </div>
+        <div class="tm-col-second">
+          <a href="">
+            <img class="tm-img-responsive" alt="" src="wapbase/img/wapbase/fuwu_5.png" />
+          </a>
+        </div>
+        <div class="tm-col-second">
+          <a href="">
+            <img class="tm-img-responsive" alt="" src="wapbase/img/wapbase/fuwu_6.png" />
+          </a>
+        </div>
+        <div class="tm-col-second">
+          <a href="">
+            <img class="tm-img-responsive" alt="" src="wapbase/img/wapbase/fuwu_7.png" />
+          </a>
+        </div>
+        <div class="tm-col-second">
+          <a href="">
+            <img class="tm-img-responsive" alt="" src="wapbase/img/wapbase/fuwu_8.png" />
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </section>
+  <section class="tm-section-2">
+    <div class="tm-area">
+      <div class="tm-base-title3">他们都在买</div>
+      <table class="tm-base-table">
+        <tr>
+          <td>
+            <img src="wapbase/img/wapbase/customer_1.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_2.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_3.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_4.png" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="wapbase/img/wapbase/customer_5.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_6.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_7.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_8.png" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="wapbase/img/wapbase/customer_9.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_10.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_11.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_12.png" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="wapbase/img/wapbase/customer_13.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_14.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_15.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_16.png" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="wapbase/img/wapbase/customer_17.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_18.png" />
+          </td>
+          <td>
+            <img src="wapbase/img/wapbase/customer_19.png" />
+          </td>
+          <td>
+            <div class="tm-base-table-more">
+              <p class="tm-p1">More</p>
+              <p class="tm-p2">更多</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="tm-gaishan">改善：满意度提升70%, 效率提升30%, 成本降低18%</div>
+    </div>
+  </section>
+  <section class="tm-section-zizhi">
+    <div>
+      <div class="tm-zizhi-triangle"></div>
+    </div>
+    <div class="tm-area tm-zizhi-area">
+      <h2 class="tm-h2">荣誉资质</h2>
+      <!--<div class="tm-zizhi-nums">
+      <div class="tm-zizhi-nums-item">
+        <p class="tm-p1">
+          <span class="tm-zizhi-nums-ico">939</span>
+        </p>
+        <p class="tm-p2">品牌入驻</p>
+      </div>
+      <div class="tm-zizhi-nums-item">
+        <p class="tm-p1">
+          <span class="tm-zizhi-nums-ico">108</span>
+        </p>
+        <p class="tm-p2">合作企业</p>
+      </div>
+      <div class="tm-zizhi-nums-item">
+        <p class="tm-p1">
+          <span class="tm-zizhi-nums-ico">19</span>
+        </p>
+        <p class="tm-p2">授权证书</p>
+      </div>
+    </div>
+    <h4 class="tm-h4" style="text-align: center;font-weight: 600;margin-top: 1rem;font-size: 0.65rem;">土猫网企业采购打造精英采购平台</h4>-->
+      <div style="margin-top: 0.1rem;margin-bottom: 0.5rem;">
+        <b style="color: #ff0000;">土猫网是巨星科技(股票代码002444)倾力打造的专业五金工具服务商</b>
+      </div>
+      <div class="tm-rongyu">
+        <div class="tm-rongyu-item">
+          <img src="landing/icon_logo_boshi.png" />
+          <p class="tm-rongyu-text">博世授权证书</p>
+        </div>
+        <div class="tm-rongyu-item">
+          <img src="landing/icon_logo_xilide.png" />
+          <p class="tm-rongyu-text">喜利得授权证书</p>
+        </div>
+        <div class="tm-rongyu-item">
+          <img src="landing/icon_logo_3m.png" />
+          <p class="tm-rongyu-text">3M授权证书</p>
+        </div>
+        <div class="tm-rongyu-item">
+          <img src="http://resource.toolmall.com/resource/toolmallPc/resources/shop/bigImages/actStatic/certificate_8_s.jpg" />
+          <p class="tm-rongyu-text" style="line-height: 1.3;">中国五金交电化工商业协会
+          </p>
+        </div>
+        <div class="tm-rongyu-item">
+          <img src="http://resource.toolmall.com/resource/toolmallPc/resources/shop/bigImages/actStatic/certificate2_4.jpg" />
+          <p class="tm-rongyu-text">
+            可信网站验证单位
+          </p>
+        </div>
+        <div class="tm-rongyu-item">
+          <img src="http://resource.toolmall.com/resource/toolmallPc/resources/shop/bigImages/actStatic/certificate2_5.jpg" />
+          <p class="tm-rongyu-text" style="line-height: 1.3;">
+            中国(杭州)跨境电子商务综合试验区首批试点企业
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="tm-section-liucheng">
+    <h2 class="tm-h2">服务流程</h2>
+    <div class="tm-liucheng-text">
+      土猫网端代注册 -> 企业买家端注册 -> 土猫网端审核 -> 企业买家端询价需求 -> 土猫网端报价 -> 企业买家端建采购单 -> 土猫网端代下采购单 -> 企业买家端进行结算（支持线上支付、对公转账、账期等多种结算方式） -> 土猫网端审单
+      -> 土猫网端拣货、发货 -> 企业买家端验收 -> 土猫网端对账售后 -> 企业买家端常规采购
+    </div>
+  </section>
+  <section class="tm-section-form">
+    <form class="tm-base-form">
+      <div class="tm-form-group">
+        <input type="text" name="name" placeholder="姓名" id="it_name1" />
+      </div>
+      <div class="tm-form-group">
+        <input type="text" name="phone" placeholder="电话" id="it_phone1" />
+      </div>
+      <div class="tm-form-group">
+        <textarea name="content" placeholder="您的需求" rows="3" id="it_remark1"></textarea>
+      </div>
+      <div class="tm-form-group" style="margin-top: 0.25rem;">
+        <!--<input class="tm-btn-primary" type="button" id="btn_activitySub1" value="提交"/>-->
+        <a class="tm-btn-primary" id="btn_activitySub1">提交</a>
+      </div>
+    </form>
+    <div class="tm-p1" style="margin-top: 0.5rem;">
+      <img class="tm-ico" src="wapbase/img/wapbase/icon_position.png" /> 浙江省杭州市江干区九环路35号
+    </div>
+    <div class="tm-p1">
+      <img class="tm-ico" src="wapbase/img/wapbase/icon_phone.png" /> 400-9057-828（周一至周六 9:00-21:00）
+    </div>
+    <div class="tm-p2">
+      <img class="tm-ico" src="wapbase/img/wapbase/icon_star.png" /> 签署协议专享价
+    </div>
+    <div class="tm-btns-row">
+      <a class="tm-btn-primary" href="http://toolmall.com/t/288md.htm">
+        详细注册
+        <img src="wapbase/img/wapbase/icon_click.png" />
+      </a>
+      <a class="tm-btn-default js-open-kefu" href="">
+        联系客服
+        <img src="wapbase/img/wapbase/icon_phone_2.png" />
+      </a>
+    </div>
+    <div class="tm-jx-row">
+      <a href="http://www.greatstartools.com/">
+        <img style="height: 1.4rem;" src="wapbase/img/wapbase/logo_juxing.png" />
+      </a>
+    </div>
+  </section>
+  <footer class="tm-footer">
+    <div class="tm-footer-in">
+      <div class="tm-footer-left">
+        服务热线 400-9057-828
+      </div>
+      <div class="tm-footer-right">
+        <a class="js-open-kefu">联系客服</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://qiyukf.com/script/9865ab019f25c7b237472bd8eb5b6c55.js?templateId=2500810"></script>
+
+  <!--<script>
+    /*! device.js 0.2.7   https://github.com/matthewhudson/device.js   */
+    (function(){var a,b,c,d,e,f,g,h,i,j;b=window.device,a={},window.device=a,d=window.document.documentElement,j=window.navigator.userAgent.toLowerCase(),a.ios=function(){return a.iphone()||a.ipod()||a.ipad()},a.iphone=function(){return!a.windows()&&e("iphone")},a.ipod=function(){return e("ipod")},a.ipad=function(){return e("ipad")},a.android=function(){return!a.windows()&&e("android")},a.androidPhone=function(){return a.android()&&e("mobile")},a.androidTablet=function(){return a.android()&&!e("mobile")},a.blackberry=function(){return e("blackberry")||e("bb10")||e("rim")},a.blackberryPhone=function(){return a.blackberry()&&!e("tablet")},a.blackberryTablet=function(){return a.blackberry()&&e("tablet")},a.windows=function(){return e("windows")},a.windowsPhone=function(){return a.windows()&&e("phone")},a.windowsTablet=function(){return a.windows()&&e("touch")&&!a.windowsPhone()},a.fxos=function(){return(e("(mobile;")||e("(tablet;"))&&e("; rv:")},a.fxosPhone=function(){return a.fxos()&&e("mobile")},a.fxosTablet=function(){return a.fxos()&&e("tablet")},a.meego=function(){return e("meego")},a.cordova=function(){return window.cordova&&"file:"===location.protocol},a.nodeWebkit=function(){return"object"==typeof window.process},a.mobile=function(){return a.androidPhone()||a.iphone()||a.ipod()||a.windowsPhone()||a.blackberryPhone()||a.fxosPhone()||a.meego()},a.tablet=function(){return a.ipad()||a.androidTablet()||a.blackberryTablet()||a.windowsTablet()||a.fxosTablet()},a.desktop=function(){return!a.tablet()&&!a.mobile()},a.television=function(){var a;for(television=["googletv","viera","smarttv","internet.tv","netcast","nettv","appletv","boxee","kylo","roku","dlnadoc","roku","pov_tv","hbbtv","ce-html"],a=0;a<television.length;){if(e(television[a]))return!0;a++}return!1},a.portrait=function(){return window.innerHeight/window.innerWidth>1},a.landscape=function(){return window.innerHeight/window.innerWidth<1},a.noConflict=function(){return window.device=b,this},e=function(a){return-1!==j.indexOf(a)},g=function(a){var b;return b=new RegExp(a,"i"),d.className.match(b)},c=function(a){var b=null;g(a)||(b=d.className.replace(/^\s+|\s+$/g,""),d.className=b+" "+a)},i=function(a){g(a)&&(d.className=d.className.replace(" "+a,""))},a.ios()?a.ipad()?c("ios ipad tablet"):a.iphone()?c("ios iphone mobile"):a.ipod()&&c("ios ipod mobile"):a.android()?c(a.androidTablet()?"android tablet":"android mobile"):a.blackberry()?c(a.blackberryTablet()?"blackberry tablet":"blackberry mobile"):a.windows()?c(a.windowsTablet()?"windows tablet":a.windowsPhone()?"windows mobile":"desktop"):a.fxos()?c(a.fxosTablet()?"fxos tablet":"fxos mobile"):a.meego()?c("meego mobile"):a.nodeWebkit()?c("node-webkit"):a.television()?c("television"):a.desktop()&&c("desktop"),a.cordova()&&c("cordova"),f=function(){a.landscape()?(i("portrait"),c("landscape")):(i("landscape"),c("portrait"))},h=Object.prototype.hasOwnProperty.call(window,"onorientationchange")?"orientationchange":"resize",window.addEventListener?window.addEventListener(h,f,!1):window.attachEvent?window.attachEvent(h,f):window[h]=f,f(),"function"==typeof define&&"object"==typeof define.amd&&define.amd?define(function(){return a}):"undefined"!=typeof module&&module.exports?module.exports=a:window.device=a}).call(this);
+
+    (function(){
+      if(!device.mobile()){
+        //debugger;
+        location.href = "http://b.toolmall.com/landing.html";
+      }
+    })();
+</script>-->
+
+  <script>
+    var uid;
+    // 优先从url中取uid，若有则后面的统计请求中使用这个值
+    var url_uid;
+
+    function getQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return null;
+    }
+    url_uid = getQueryString("uid");
+    if (url_uid && url_uid != undefined && url_uid != "") {
+      window.localStorage.setItem("COUNT_UID", url_uid);
+      uid = url_uid;
+    }
+    //打开页面发送统计
+    function countOpen() {
+      var params = {
+        url: window.location.href, // 当前静态页完整URL,
+        referUrl: document.referrer, // 来源URL,
+        pageType: 'b_wap_wapbase', // pageType内容类型
+        contentID: 'b_wap_wapbase', // contentID对应分类页或产品页ID
+      };
+      if (window.localStorage.getItem("COUNT_UID")) {
+        params.uid = window.localStorage.getItem("COUNT_UID");
+      }
+
+      //创建异步对象
+      var xhr = new XMLHttpRequest();
+
+      var dataStr = '';
+      var url = 'http://www.toolmall.com/stat/open';
+
+      Object.keys(params).forEach(key => {
+        dataStr += key + '=' + params[key] + '&';
+      })
+      if (dataStr !== '') {
+        dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
+        url = url + '?' + dataStr;
+      }
+      //设置请求的类型及url
+      //post请求一定要添加请求头才行不然会报错
+      xhr.open('get', url);
+      xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+      xhr.onreadystatechange = function () {
+        // 这步为判断服务器是否正确响应
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          if (xhr.response) {
+            var json = JSON.parse(xhr.response);
+            uid = json.uid;
+
+            if (url_uid && url_uid != undefined && url_uid != "") {
+              window.localStorage.setItem("COUNT_UID", uid);
+            }
+          }
+        }
+      };
+      //发送请求
+      xhr.send(params);
+    }
+    countOpen();
+
+    function countClose() {
+      var parms = {
+        url: window.location.href, // 当前静态页完整URL,
+        referUrl: document.referrer, // 来源URL,
+        pageType: 'b_wap_wapbase', // pageType内容类型
+        contentID: 'b_wap_wapbase', // contentID对应分类页或产品页ID
+        uid: url_uid
+      };
+
+      //创建异步对象
+      var xhr = new XMLHttpRequest();
+      //设置请求的类型及url
+      var dataStr = '';
+      var url = 'http://www.toolmall.com/stat/close';
+
+      Object.keys(parms).forEach(key => {
+        dataStr += key + '=' + parms[key] + '&';
+      })
+      if (dataStr !== '') {
+        dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
+        url = url + '?' + dataStr;
+      }
+      //post请求一定要添加请求头才行不然会报错
+      xhr.open('get', url, false);
+      xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+      xhr.onreadystatechange = function () {
+        // 这步为判断服务器是否正确响应
+        if (xhr.readyState == 4 && xhr.status == 200) {
+
+        }
+      };
+      //发送请求
+      xhr.send(parms);
+    }
+
+    window.onbeforeunload = function (event) {
+      countClose();
+    }
+
+
+    function bindEventHandlers() {
+      var elems = document.querySelectorAll(".js-open-kefu");
+      for (var j = 0; j < elems.length; j++) {
+        elems[j].addEventListener("click", function () {
+          ysf.open({
+            templateId: 2500810
+          });
+        });
+      }
+
+      function resetForms() {
+        var forms = document.querySelectorAll("form.tm-base-form");
+        forms.forEach(function (item) {
+          item.reset();
+        });
+      }
+
+      //提交表单，成功后reset表单
+      function postForm(params) {
+        params = JSON.stringify(params);
+        //创建异步对象
+        var xhr = new XMLHttpRequest();
+        //设置请求的类型及url
+        //post请求一定要添加请求头才行不然会报错
+        xhr.open('post', 'http://b.toolmall.com/verify/savePotentialCustomer'); //http://192.168.100.179:8080/merchant/back/product/products
+        xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+        //xhr.setRequestHeader("withCredentials", "true");
+        xhr.withCredentials = true;
+
+        //发送请求
+        // xhr.send("{activityUrl:'http://192.168.100.179:81/landing.html',name:'sss',phone:'dfdsafdsaf',remark:'sssssssssssssss'}");
+        xhr.onreadystatechange = function () {
+          // 这步为判断服务器是否正确响应
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log(xhr.responseText);
+            var json1 = JSON.parse(xhr.responseText);
+            if (json1.code === "0000") {
+              alert("您的需求提交成功！");
+              //清空表单数据
+              resetForms();
+            } else {
+              alert(json1.message);
+            }
+
+          }
+        };
+
+        xhr.send(params);
+      }
+
+      function checkPhone(params, postFormCallback) {
+        var phone = params.phone;
+        //创建异步对象
+        var xhr = new XMLHttpRequest();
+        //设置请求的类型及url
+        //post请求一定要添加请求头才行不然会报错
+        xhr.open('get', 'http://b.toolmall.com/verify/checkMobilePhoneNumber?mobilePhoneNumber=' + phone);
+        xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+        xhr.onreadystatechange = function () {
+          // 这步为判断服务器是否正确响应
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            if (xhr.response) {
+              var json = JSON.parse(xhr.response);
+              if (json.code != '0000') {
+                console.log('tang------------------aa->' + json.code);
+                return window.alert("手机号已存在，请重新输入后提交。");
+              } else {
+                console.log('tang------------------bb->' + json.code);
+                postFormCallback(params);
+              }
+            }
+          } else {
+            return false;
+          }
+        }
+        //发送请求
+        xhr.send();
+      }
+
+      //校验表单。 如果通不过校验，弹出错误消息并返回false； 通过校验返回true
+      function validateForm(params) {
+        /*var params = {
+          activityUrl : location.href,
+          name: document.getElementById('it_name').value,
+          phone: document.getElementById('it_phone').value,
+          remark: document.getElementById('it_remark').value,
+        };*/
+        if (!params.name || params.name.trim() == '') {
+          alert("姓名不能为空");
+          return false;
+        }
+        if (!params.phone || params.phone.trim() == '') {
+          alert("电话不能为空");
+          return false;
+        }
+        var pattern1 = /^(\d|-|_){6,}$/;
+        if (!pattern1.test(params.phone.trim())) {
+          alert("电话格式错误");
+          return false;
+        }
+        if (!params.remark || params.remark.trim() == '') {
+          alert("需求不能为空");
+          return false;
+        }
+        return true;
+      }
+
+      var btn = document.getElementById('btn_activitySub'); //btn_activitySub, it_name,  it_phone,  it_remark
+      btn.addEventListener('click', function () {
+
+        var params = {
+          activityUrl: location.href,
+          name: document.getElementById('it_name').value,
+          phone: document.getElementById('it_phone').value,
+          remark: document.getElementById('it_remark').value,
+        };
+
+        if (!validateForm(params)) {
+          return false;
+        }
+        /* 依次执行 checkPhone(params);  postForm(params);。 采用callback机制实现顺序执行 */
+        //checkPhone(params, postForm);
+        postForm(params);
+
+      });
+
+      ///////////////////////
+      var btn1 = document.getElementById('btn_activitySub1');
+      btn1.addEventListener('click', function () {
+        var params = {
+          activityUrl: location.href,
+          name: document.getElementById('it_name1').value,
+          phone: document.getElementById('it_phone1').value,
+          remark: document.getElementById('it_remark1').value,
+        };
+        if (!validateForm(params)) {
+          return false;
+        }
+        /* 依次执行 checkPhone(params);  postForm(params);。 采用callback机制实现顺序执行 */
+        //        checkPhone(params);
+        //        postForm(params);
+
+        //checkPhone(params, postForm);
+        postForm(params);
+      });
+
+    }
+    bindEventHandlers();
+
+  </script>
+
+  <script>
+    (function () {
+      function addBaiduJs() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8c7f408de312dce1c8d87c36e276ba25";
+        document.body.appendChild(hm);
+      }
+      if (window.addEventListener) {                    //所有主流浏览器，除了 IE 8 及更早 IE版本
+        window.addEventListener("load", addBaiduJs);
+      } else if (window.attachEvent) {                  // IE 8 及更早 IE 版本
+        window.attachEvent("onload", addBaiduJs);
+      }
+    })();
+  </script>
+
+</body>
+
+</html>

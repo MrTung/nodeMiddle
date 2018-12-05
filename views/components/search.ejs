@@ -1,0 +1,51 @@
+<style>
+    .el-icon-tm-dianhua:before {
+        content: "\e684";
+    }
+</style>
+
+<script>
+    function chat() {
+        alert("七鱼客服按钮");
+    }
+</script>
+
+<div class="tm-topSearch-out" id="topSearch-out">
+    <div class="tm-container tm-topSearch">
+        <div class="tm-clearfix">
+            <div class="tm-logo">
+                <a href="/">
+                    <img class="whiteview_logo" width="200" height="60" alt="土猫网logo" src="http://resource.toolmall.com/resource/toolmallPc/resources/home/icon_toolmall_logo.png">
+                </a>
+            </div>
+            <div class="tm-search">
+                <div class="tm-search-form-out">
+                    <div id="productSearchForm" class="tm-search-form">
+                        <input class="tm-search-text" name="keyword" placeholder="搜索工具/品牌" maxlength="30" >
+
+                        <input type="submit" class="tm-search-submit" value="搜  索" >
+                    </div>
+                </div>
+                <div id="indexKeywords" class="tm-search-keywords-out">
+                    <a href="javascript:;"  class="tm-search-keyword">手电钻</a>
+                    <a href="javascript:;"  class="tm-search-keyword">充电钻/起子机</a>
+                    <a href="javascript:;"  class="tm-search-keyword">角磨机</a>
+                    <a href="javascript:;"  class="tm-search-keyword">冲击钻</a>
+                    <a href="javascript:;"  class="tm-search-keyword">电圆锯</a>
+                </div>
+            </div>
+            <div class="tm-kefu">
+                <a class="tm-kefu-a" onclick="javascript:chat();return false;">
+                    <span class="el-icon-tm-serve"></span>
+                    联系客服&nbsp;400-9057-828
+                </a>
+            </div>
+            <a rel="nofollow" class="tm-search-cart" href="{{{config.main_host}}}/cart">
+                <div class="tm-search-cart-in">
+                    购物车&nbsp;(
+                    <span class="c-primary" id="cartQuantities">0</span>&nbsp;)
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

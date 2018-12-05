@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>土猫网企业购_一站式阳光采购、企业采购、B2B采购网平台</title>
+
+  <%- include("./components/common.ejs") %>
+
+    <style>
+      .pageview {
+        width: 100%;
+        height: 100%;
+      }
+
+      .contentview {
+        width: 100%;
+        /* background-color: gray; */
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-image: url(http://resource.toolmall.com/resource/toolmallPc/resources/assets/icon_login_bg.png);
+        background-size: cover;
+        -moz-background-size: cover;
+      }
+
+      .contentview:after {
+        display: table;
+        content: " ";
+        clear: both;
+      }
+
+      .contentview_wide {
+        width: 1200px;
+        margin: auto;
+      }
+
+      .contentview_Picture {
+        float: left;
+        margin-top: 120px;
+      }
+
+      .ruleForm {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      .loginview {
+        width: 350px;
+        height: 420px;
+        /* margin: auto; */
+        text-align: center;
+        background-color: white;
+        float: right;
+        padding: 20px 30px;
+      }
+
+      .titletext {
+        font-size: 23px;
+      }
+
+      .loginbtn {
+        width: 100%;
+      }
+
+      .login_codeview {
+        /* display: flex;
+                flex-direction: row;
+                align-items: center; */
+        display: table;
+        width: 100%;
+        margin: auto;
+        content: " ";
+      }
+
+      .input_verfiy {
+        float: left;
+        width: 60%;
+      }
+
+      .imgview {
+        /* float: right; */
+        width: 20%;
+        margin-top: 3px;
+        height: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .input_verfiy_refresh {
+        padding-bottom: 7px;
+      }
+
+      .login_checkview {
+        /* display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 20px;
+                align-items: center; */
+        display: table;
+        width: 100%;
+        margin: auto;
+        content: " ";
+      }
+
+      .login_checkbox {
+        float: left;
+      }
+
+      .login_checkview>a {
+        float: right;
+      }
+
+      .row {
+        margin-top: 15px;
+      }
+
+    </style>
+
+</head>
+
+<body>
+  <%- include("./components/header.ejs") %>
+
+    <%- include("./components/search.ejs") %>
+
+      <div class="tm-root" id="app">
+
+        <div class="pageview">
+          <div class="contentview">
+            <div class="contentview_wide">
+              <div class="contentview_Picture">
+                <img src="/images/login/icon_login_picture.png">
+              </div>
+              <div class="loginview">
+                <h1 class="row titletext" align="left">企业采购会员登录</h1>
+
+                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="ruleForm">
+                  <el-form-item prop="username">
+                    <el-input v-model="ruleForm.username" placeholder="请输入用户名或手机号" autofocus="autofocus"></el-input>
+                  </el-form-item>
+                  <el-form-item prop="password">
+                    <el-input v-model="ruleForm.password" type="password" placeholder="请输入6-32位密码"></el-input>
+                  </el-form-item>
+                  <el-form-item prop="code" :error="errors.imgVerfiyCode">
+                    <div>
+                      <el-input @keyup.enter.native="submitForm('ruleForm')" v-model="ruleForm.code" placeholder="请输入验证码" maxlength="4" v-on:keyup.enter="submitForm('ruleForm')"
+                        v-on:input="checkcode" style="margin-right:20px;float:left;width:230px;"></el-input>
+                      <img :src="codeurl" class="imgview" ref="codeimg" @click="refleshImg" style="float:left;margin-top:5px;margin-left: 0px">
+                      <img src="/images/login/icon_login_verfiy_refresh.png" @click="refleshImg">
+                    </div>
+                  </el-form-item>
+                </el-form>
+                <el-button class="loginbtn" type="primary" @click="submitForm('ruleForm')">登录</el-button>
+                <div class="row login_checkview">
+                  <el-checkbox v-model="checked" class="login_checkbox" v-show="false">七天内免登入</el-checkbox>
+                  <a class="global_a" rel="nofollow" href="/login/findpwd" style="text-decoration:underline;">忘记密码？</a>
+                </div>
+                <div class="row">
+                  企业注册
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%- include("./components/footer.ejs") %>
+
+      </div>
+
+
+      <script>
+        var appVue = new Vue({
+          el: '#app',
+          mounted: function () {
+
+            this.refleshImg();
+
+            /*
+                // todo
+                // 统计代码-页面打开
+                this.countOpen(null, this);
+    
+                // 统计代码-心跳
+                this.countHeartbeat(null, this);*/
+
+            // JumpToWap('login');
+          },
+          data: function () {
+            return {
+              //路由传递的参数 有的话登录成功之后需要跳珠回去
+              query: {},
+              isImgVerfiy: false,
+              checked: true,
+              codeurl: "<%=commonUrls.Captchaurl%>?6666",
+              ruleForm: {
+                username: "",
+                password: "",
+                code: ""
+              },
+              errors: {
+                imgVerfiyCode: ""
+              },
+              rules: {
+                username: [{
+                    required: true,
+                    message: "请输入用户名",
+                    trigger: "blur"
+                  },
+                  {
+                    min: 2,
+                    max: 20,
+                    message: "用户名不能低于2个字符",
+                    trigger: "blur"
+                  }
+                ],
+                password: [{
+                    required: true,
+                    message: "请输入密码",
+                    trigger: "blur"
+                  },
+                  {
+                    min: 0,
+                    max: 32,
+                    message: "长度在 6 到 32 个字符",
+                    trigger: "blur"
+                  }
+                ],
+                code: [{
+                    required: true,
+                    message: "请输入验证码",
+                    trigger: "blur"
+                  },
+                  {
+                    min: 4,
+                    max: 4,
+                    message: "请输入4位数字验证码",
+                    trigger: "blur"
+                  }
+                ]
+              }
+            };
+          },
+          methods: {
+            //验证表单
+            submitForm: function (formName) {
+              var me = this;
+              if (!this.isImgVerfiy) {
+                this.errors.imgVerfiyCode = "校验验证码失败，请重新校验";
+                return;
+              }
+              this.$refs[formName].validate(function (valid) {
+                if (valid) {
+                  var params = {
+                    userName: me.ruleForm.username,
+                    password: me.ruleForm.password.trim(),
+                    /*type: "password",
+                    scope: "server",
+                    clientId: "toolmall",
+                    clientSecret: "merchant-back"*/
+                  };
+                  //调用登录接口
+                  $.post('<%=commonUrls.login%>', params, function (response) {
+                    if (response.code == "0000") {
+                      alert("登录成功， 3秒后跳转到首页");
+                      setTimeout(function () {
+                        location.href = "/";
+                      }, 3000);
+                    } else {
+                      alert("登录失败， 请打开console查看response");
+                      console.log(JSON.stringify(response));
+                    }
+                  }, "json");
+                } else {
+                  return false;
+                }
+              });
+            },
+
+            //验证验证码
+            checkcode: function (codestr) {
+              var me = this;
+              if (codestr.length == 4) {
+                $.ajax({
+                  url: '<%=commonUrls.Checkcodeurl%>',
+                  type: 'GET',
+                  data: {
+                    checkCode: codestr
+                  },
+                  dataType: 'json',
+                  xhrFields: {
+                    withCredentials: true
+                  },
+                  crossDomain: true,
+                  success: function (response) {
+                    if (response.code != "0000") {
+                      me.isImgVerfiy = false;
+                      me.errors.imgVerfiyCode = response.message;
+                      me.refleshImg();
+                    } else {
+                      me.isImgVerfiy = true;
+                    }
+                    console.log(response);
+                  },
+                  error: function (err) {
+                    me.isImgVerfiy = false;
+                    me.errors.imgVerfiyCode = "校验图形验证码出错!";
+                    console.log(err);
+                  }
+                });
+              } else {
+                this.errors.imgVerfiyCode = "";
+              }
+            },
+
+            //刷新验证码
+            refleshImg: function () {
+              this.codeurl =
+                "<%=commonUrls.Captchaurl%>?" + Math.floor(Math.random() * 1000000);
+            },
+            getCookie: function (name) {
+              var arr,
+                reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+              if ((arr = document.cookie.match(reg))) return arr[2];
+              else return null;
+            }
+          }
+        })
+
+      </script>
+</body>
+
+</html>
