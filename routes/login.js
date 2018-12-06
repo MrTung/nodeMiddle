@@ -1,4 +1,4 @@
-var Urls = require('../server/formatURL.js');
+var Urls = require('../api/baseservice.js');
 
 /*
  * 执行静态化方法
