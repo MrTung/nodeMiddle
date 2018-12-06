@@ -3,11 +3,9 @@ var toolmallHttp = require('./httpRequest.js');
 
 var Urls = require('./formatURL.js');
 
-//  POST 请求
-// app.post('/', function (req, res) {
-//   console.log("主页 POST 请求");
-//   res.send('Hello POST');
-// })
+var router = express.Router();
+
+var routerItems = {};
 
 /* GET home page. */
 var items = [{
@@ -15,15 +13,6 @@ var items = [{
 }, {
   title: '文章2'
 }];
-
-
-// 对页面 abcd, abxcd, ab123cd, 等响应 GET 请求
-// app.get('/ab*cd', function (req, res) {
-//   console.log("/ab*cd GET 请求");
-//   res.send('正则匹配');
-// })
-
-var routerItems = {};
 
 //首页
 routerItems.index = function (req, res) {
@@ -70,7 +59,6 @@ routerItems.article = function (req, res, next) {
 
 routerItems.list_user = function (req, res) {
   console.log("/list_user GET 请求");
-  // res.send('用户列表页面');
   res.json({
     code: 0,
     msg: 'success',
@@ -78,7 +66,8 @@ routerItems.list_user = function (req, res) {
   })
 };
 
-var router = express.Router();
+//可以将复杂的执行函数放在单独的js文件里，然后require导入进来
+routerItems.generate = require('./generate.js');
 
 router.get('/', routerItems.index); //首页
 router.get('/hello', routerItems.hello);
@@ -87,5 +76,6 @@ router.get('/login', routerItems.login);
 router.get('/list', routerItems.list);
 router.post('/article', routerItems.article);
 router.get('/list_user', routerItems.list_user);
+router.get('/generate', routerItems.generate.runGenerate);
 
 module.exports = router;
