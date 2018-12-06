@@ -1,7 +1,7 @@
 var express = require('express');
 var axios = require('axios');
 var bodyParser = require('body-parser');
-var router = require('./router.js');
+var router = require('./server/router.js');
 
 // 使用body-parser解析post请求的参数，如果没有，req.body为undefined。
 var cors = require('cors');
