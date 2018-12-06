@@ -9,7 +9,7 @@ const toolmallHttp = function (request) {
   return new Promise((resolve, reject) => {
     let body = '';
     // http模块拿到真实后台api的数据,并根据自己的实际需求修改数据，以最佳形态返回给前端直接使用。
-    http.get(toolmall(), function (res) {
+    http.get(toolmall.getPlanSceneList, function (res) {
       res.on('data', (data) => {
         body += data;
       }).on('end', () => {

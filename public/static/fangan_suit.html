@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge/11/10/9/8,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta charset="UTF-8">
+  <title>土猫网-企业采购</title>
+
+  <meta name="keywords" content="阳光采购,工具,五金,五金工具,手动工具,电动工具,工具组套,土猫网,工具包_箱_车,汽修汽保,照明,劳保,电动工具附件_耗材,电子电工_VDE工具" />
+  <meta name="description" content="土猫网(toolmall.com)是一家专卖五金工具的阳光采购平台，其中涉及到手动工具，电动工具，气动工具，汽修工具等五金工具及电动工具，手动工具的各个领域，网站并非纯卖五金工具，电动工具和手动工具更重要的是为用户解决五金工具阳光采购方案。"
+  />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <style>
+    .tm-suit-main img {
+      display: block;
+    }
+
+    .tm-suit-main .img-descripton {
+      display: none;
+    }
+
+  </style>
+  <!--  footer部分的样式 -->
+  <style>
+    .ensureview {
+      margin: 0 auto;
+      /* margin-top: 40px; */
+      width: 1200px;
+    }
+
+    .ensureview_li {
+      float: left;
+      display: inline;
+      margin: 20px 0;
+      width: 300px;
+    }
+
+    .ensureview_item {
+      width: 260px;
+      display: table;
+      content: "";
+      /* padding: 20px; */
+      font-size: 12px;
+      color: #b7926e;
+    }
+
+    .ensureview_ex {
+      padding-top: 5px;
+    }
+
+    .releview {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    .releview_li {
+      float: left;
+      /* display: inline; */
+      margin: 20px 0;
+      width: 150px;
+    }
+
+    .releview_item {
+      /* display: grid; */
+      margin-right: 20px;
+      /* text-align: center; */
+    }
+
+    .bottom_about {
+      margin: 0 auto;
+      width: 1200px;
+    }
+
+    .bottom_ul {
+      /* list-style: none; */
+      text-align: center;
+      margin-bottom: 10px;
+      width: 100%;
+      float: left;
+    }
+
+    .bottom_ul>li {
+      display: inline;
+      padding: 0 10px;
+      /* border-right: 1px solid #999; */
+    }
+
+    .bottom_ul>li>a {
+      text-decoration: none;
+      outline: 0;
+      color: inherit;
+    }
+
+    .bottom_ul>li>a:hover {
+      color: #0D76E7;
+    }
+
+    .bottom_ul:after {
+      display: block;
+      clear: both;
+    }
+
+    .bottom_flink {
+      width: 1200px;
+      margin: 15px auto;
+      display: table;
+      content: "";
+    }
+
+    .bottom_flink_ul>li {
+      display: inline-block;
+      width: 8%;
+      padding-top: 10px;
+      color: #999;
+    }
+
+    .bottom_record {
+      color: #999;
+      margin: 0 auto;
+      width: 1200px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .bottom_btmicon {
+      width: 100%;
+      overflow: hidden;
+      padding-top: 10px;
+      background: #fff;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .bottom_btmicon>a {
+      line-height: 14px;
+      padding: 0 10px;
+      font-size: 14px;
+    }
+
+  </style>
+  <style>
+    .ld_sheme_bg {
+      margin-top: 80px;
+      min-width: 1200px;
+      height: 986px;
+      background: #edf5ff url(../landing/icon_scheme_big_bg.jpg) center top no-repeat;
+    }
+
+    .tm-fangan {
+      width: 1200px;
+      height: 986px;
+      position: relative;
+      margin: auto;
+    }
+
+    .ld_sheme {
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .ld_sheme_title {
+      background: #0D76E7;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 500px;
+      position: absolute;
+      top: -20px;
+      left: 30%;
+      display: none;
+    }
+
+    .ld_sheme_hc {
+      position: absolute;
+      top: 211px;
+      left: 43.5%;
+      width: 130px;
+      height: 130px;
+      display: block;
+    }
+
+    .ld_sheme_hc_text {
+      position: absolute;
+      width: 585px;
+      height: 80px;
+      top: 0;
+      left: 48%;
+      margin-top: 120px;
+      display: block;
+    }
+
+    @media screen and (min-width:1920px) {
+      .ld_sheme_bg {
+        -webkit-background-size: cover;
+        background-size: cover;
+      }
+    }
+
+    .tm_tost {
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      background-color: white;
+      background: #1b6dc5;
+    }
+
+    .tm-topMenu-btn {
+      width: 190px;
+      height: 40px;
+      display: block;
+      float: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #b7926e;
+      color: white;
+      text-align: left;
+      padding-left: 45px;
+      font-size: 16px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .tm-topMenu-part {
+      float: left;
+    }
+
+    .tm-topMenu-a {
+      font-size: 16px;
+      color: white;
+      font-weight: 400;
+      display: block;
+      float: left;
+      margin-left: 40px;
+    }
+    .tm-topMenu-a:hover{
+      font-weight:bold;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="tm-headtop">
+    <div class="tm-headtop_title">
+      <div class="tm-headtop_welcome">欢迎您进入土猫网企业采购网站</div>
+      <ul class="tm-headtop_ul">
+        <li>
+          <a href="/" class="router-link-active" target="_blank">企业采购首页</a>
+        </li>
+        <li class="tm-separator-li">
+          <span class="tm-separator">|</span>
+        </li>
+        <li>
+          <a rel="nofollow" target="_blank" href="/profile/enquiryorder">我的报价</a>
+        </li>
+        <li class="tm-separator-li">
+          <span class="tm-separator">|</span>
+        </li>
+        <li>
+          <a rel="nofollow" target="_blank" href="/profile/purchaseorders">我的订单</a>
+        </li>
+        <li class="tm-separator-li">
+          <span class="tm-separator">|</span>
+        </li>
+        <li>
+          <a rel="nofollow" href="/profile" class="" target="_blank">会员中心</a>
+        </li>
+        <li class="tm-separator-li">
+          <span class="tm-separator">|</span>
+        </li>
+        <li>
+          <a href="http://www.toolmall.com/" target="_blank">土猫网</a>
+        </li>
+        <li class="tm-separator-li">
+          <span class="tm-separator">|</span>
+        </li>
+        <li>
+          <a target="_blank" href="http://www.toolmall.com/app/dl.jhtm">手机土猫</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div data-v-4d6ca840="" id="topSearch-out" class="tm-topSearch-out">
+    <div class="tm-container tm-topSearch">
+      <div class="tm-clearfix">
+        <div class="tm-logo">
+          <h1>
+            <a href="/" class="tm-logo-a router-link-active">土猫网</a>
+          </h1>
+        </div>
+        <div class="tm-search">
+          <div class="tm-search-form-out">
+            <div id="productSearchForm" class="tm-search-form">
+              <input name="keyword" placeholder="搜索工具/品牌" maxlength="30" id="productSearchFormText" class="tm-search-text">
+              <input type="button" value="搜  索" class="tm-search-submit" id="js_search_btn" />
+            </div>
+          </div>
+          <div id="indexKeywords" class="tm-search-keywords-out">
+            <a href="/search?keyword=手电钻" class="tm-search-keyword">手电钻</a>
+            <a href="/search?keyword=充电钻" class="tm-search-keyword">充电钻</a>
+            <a href="/search?keyword=角磨机" class="tm-search-keyword">角磨机</a>
+            <a href="/search?keyword=冲击钻" class="tm-search-keyword">冲击钻</a>
+            <a href="/search?keyword=电圆锯" class="tm-search-keyword">电圆锯</a>
+          </div>
+        </div>
+        <div class="tm-kefu">
+          <a class="tm-kefu-a">
+            <span class="el-icon-tm-serve"></span>
+            联系客服&nbsp;400-9057-828
+          </a>
+        </div>
+        <a href="/cart" class="tm-search-cart" rel="nofollow">
+          <div class="tm-search-cart-in">
+            购物车
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tm_tost">
+    <div class="tm-container">
+      <div class="tm-topMenu-btn" href="http://b.toolmall.com/">商品全部分类</div>
+      <div class="tm-topMenu-part">
+        <a class="tm-topMenu-a" href="http://b.toolmall.com/">首页</a>
+        <a class="tm-topMenu-a" target="_blank" href="http://www.toolmall.com/">土猫网</a>
+        <a class="tm-topMenu-a" href="http://b.toolmall.com/brand" target="_blank">
+          品牌馆
+        </a>
+       <a class="tm-topMenu-a" href="http://b.toolmall.com/static/comhcforklif.html" target="_blank">
+          杭叉专题
+        </a>
+       <a class="tm-topMenu-a" href="http://b.toolmall.com/static/3m.html" target="_blank">
+          3M专题
+        </a>
+       <a rel="nofollow" class="tm-topMenu-a" href="http://b.toolmall.com/login" class="" target="_blank">
+          快速订单
+        </a>
+       <a class="tm-topMenu-a" href="http://b.toolmall.com/static/about.html" target="_blank">
+          关于土猫
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tm-suit-main">
+    <div class="ld_sheme_bg">
+      <div class="ld_sheme">
+        <div class="tm-fangan">
+          <img src="../landing/icon_scheme_bg.png" width="1200" height="986" usemap="map1">
+          <map name="map1" id="map1">
+            <area shape="rect" coords="16,304,278,405" href="/static/suit_dichan.html" />
+            <area shape="rect" coords="285,342,413,470" href="/static/suit_dichan.html" />
+            <area shape="rect" coords="438,125,1000,198" href="/hangcha.html" />
+            <area shape="rect" coords="523,211,652,340" href="/hangcha.html" />
+            <area shape="rect" coords="833,237,1189,335" href="/static/suit_hedian.html" />
+            <area shape="rect" coords="763,342,891,469" href="/static/suit_hedian.html" />
+            <area shape="rect" coords="760,573,888,701" href="/static/suit_gongcheng.html" />
+            <area shape="rect" coords="792,730,1189,823" href="/static/suit_gongcheng.html" />
+            <area shape="rect" coords="522,697,650,827" href="/static/suit_chuanbo.html" />
+            <area shape="rect" coords="454,865,902,940" href="/static/suit_chuanbo.html" />
+            <area shape="rect" coords="54,724,317,845" href="/static/suit_wuye.html" />
+            <area shape="rect" coords="282,573,412,701" href="/static/suit_wuye.html" />
+          </map>
+        </div>
+        <div class="ld_sheme_title">
+          <div style="font-size: 28px;font-weight: bold;color: white;">这就是我们土猫网正在做的事</div>
+          <div style="font-size: 22px;color: white;">为您公司定制一套行业采购方案</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="ensureview">
+      <ul>
+        <li class="ensureview_li">
+          <div class="ensureview_item">
+            <img data-original="http://resource.toolmall.com/resource/toolmallPc/resources/assets/icon_footer_quality.png" src="http://resource.toolmall.com/resource/toolmallPc/resources/assets/icon_footer_quality.png"
+              width="45" height="50" style="float: left; margin-right: 10px;">
+            <div class="ensureview_ex">
+              <div>20000正品</div>
+              <div>品牌授权正品保证，仓库现货直发</div>
+            </div>
+          </div>
+        </li>
+        <li class="ensureview_li">
+          <div class="ensureview_item">
+            <img data-original="http://resource.toolmall.com/resource/toolmallPc/resources/assets/icon_footer_shipping.png" src="http://resource.toolmall.com/resource/toolmallPc/resources/assets/icon_footer_shipping.png"
+              width="45" height="50" style="float: left; margin-right: 10px;">
+            <div class="ensureview_ex">
+              <div>满99元包邮</div>
+              <div>部分区域订单满99元免邮费</div>
+            </div>
+          </div>
+        </li>
+        <li class="ensureview_li">
+          <div class="ensureview_item">
+            <img data-original="http://resource.toolmall.com/resource/toolmallPc/resources/assets/icon_footer_value.png" src="http://resource.toolmall.com/resource/toolmallPc/resources/assets/icon_footer_value.png"
+              width="45" height="50" style="float: left; margin-right: 10px;">
+            <div class="ensureview_ex">
+              <div>增值税专用发票</div>
+              <div>可提供增值税专用发票</div>
+            </div>
+          </div>
+        </li>
+        <li class="ensureview_li">
+          <div class="ensureview_item">
+            <img data-original="http://resource.toolmall.com/resource/toolmallPc/resources/assets/icon_footer_cargo.png" src="http://resource.toolmall.com/resource/toolmallPc/resources/assets/icon_footer_cargo.png"
+              width="45" height="50" style="float: left; margin-right: 10px;">
+            <div class="ensureview_ex">
+              <div>7天无理由退货</div>
+              <div>安心采购，售后无忧</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <hr style="margin: 0px; width: 100%; height: 1px; border: 0px; background-color: rgb(245, 245, 245); color: rgb(245, 245, 245);">
+    <div class="releview">
+      <ul style="width: 100%; float: left;">
+        <li class="releview_li">
+          <div class="releview_item">
+            <span style="font-size: 14px; font-weight: bold; color: black; margin-bottom: 10px;">手机土猫网</span>
+            <div style="margin-top: 10px;">
+              <img src="http://resource.toolmall.com/resource/toolmallPc/resources/templet/toolmallc_app_down.png" width="90" height="90">
+            </div>
+          </div>
+        </li>
+        <li class="releview_li">
+          <div class="releview_item">
+            <span style="font-size: 14px; font-weight: bold; color: black; margin-bottom: 10px;">土猫网小程序</span>
+            <div style="margin-top: 10px;">
+              <img src="http://resource.toolmall.com/resource/toolmallPc/resources/templet/toolmallc_small_program.png" width="90"
+                height="90">
+            </div>
+          </div>
+        </li>
+        <li class="releview_li">
+          <div class="releview_item">
+            <span style="font-size: 14px; font-weight: bold; color: black; margin-bottom: 10px;">官方微信</span>
+            <div style="margin-top: 10px;">
+              <img src="http://resource.toolmall.com/resource/toolmallPc/resources/templet/toolmallc_service_no.png" width="90"
+                height="90">
+            </div>
+          </div>
+        </li>
+        <li class="releview_li">
+          <div class="releview_item">
+            <span style="font-size: 14px; font-weight: bold; color: black; margin-bottom: 10px;">常见问题</span>
+            <div style="margin-top: 10px;">
+              <td>
+                <p>
+                  <a rel="nofollow" target="_blank">怎么注册账号</a>
+                </p>
+                <p>
+                  <a rel="nofollow" target="_blank">怎么认证企业账号</a>
+                </p>
+                <p>
+                  <a rel="nofollow" target="_blank">忘记密码怎么办</a>
+                </p>
+              </td>
+            </div>
+          </div>
+        </li>
+        <li class="releview_li">
+          <div class="releview_item">
+            <span style="font-size: 14px; font-weight: bold; color: black; margin-bottom: 10px;">购物指南</span>
+            <div style="margin-top: 10px;">
+              <td>
+                <p>
+                  <a rel="nofollow" target="_blank">怎么批量购买</a>
+                </p>
+                <p>
+                  <a rel="nofollow" target="_blank">怎么支付</a>
+                </p>
+                <p>
+                  <a rel="nofollow" target="_blank">怎么开票</a>
+                </p>
+              </td>
+            </div>
+          </div>
+        </li>
+        <li class="releview_li">
+          <div class="releview_item">
+            <span style="font-size: 14px; font-weight: bold; color: black; margin-bottom: 10px;">发送活动</span>
+            <div style="margin-top: 10px;">
+              <td>
+                <p>
+                  <a rel="nofollow" target="_blank">配送时效</a>
+                </p>
+                <p>
+                  <a rel="nofollow" target="_blank">配送方式</a>
+                </p>
+                <p>
+                  <a rel="nofollow" target="_blank">订货周期</a>
+                </p>
+              </td>
+            </div>
+          </div>
+        </li>
+        <li class="releview_li">
+          <div class="releview_item">
+            <span style="font-size: 14px; font-weight: bold; color: black; margin-bottom: 10px;">特色服务</span>
+            <div style="margin-top: 10px;">
+              <td>
+                <p>
+                  <a rel="nofollow" target="_blank">定制工具</a>
+                </p>
+                <p>
+                  <a rel="nofollow" target="_blank">专属采购系统</a>
+                </p>
+                <p>
+                  <a rel="nofollow" target="_blank">开发平台对接</a>
+                </p>
+              </td>
+            </div>
+          </div>
+        </li>
+        <li class="releview_li">
+          <div class="releview_item">
+            <span style="font-size: 14px; font-weight: bold; color: black; margin-bottom: 10px;">专属客服</span>
+            <div style="margin-top: 10px;">
+              <td>
+                <p>
+                  <a rel="nofollow" target="_blank">资深工具专家</a>
+                </p>
+                <p>
+                  <a rel="nofollow" target="_blank">一对一服务</a>
+                </p>
+                <p>
+                  <a rel="nofollow" target="_blank">售后无忧</a>
+                </p>
+              </td>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom_about">
+      <ul class="bottom_ul">
+        <li>
+          <a>联系我们</a>
+        </li>
+        <li class="tm-separator-li">
+          <span class="tm-separator">|</span>
+        </li>
+        <li>
+          <a>
+            网站地图
+          </a>
+        </li>
+        <li class="tm-separator-li">
+          <span class="tm-separator">|</span>
+        </li>
+        <li>
+          <a>
+            怎么入驻
+          </a>
+        </li>
+        <li class="tm-separator-li">
+          <span class="tm-separator">|</span>
+        </li>
+        <li>
+          <a>
+            加入我们
+          </a>
+        </li>
+        <li class="tm-separator-li">
+          <span class="tm-separator">|</span>
+        </li>
+        <li>
+          <a>
+            工具定制
+          </a>
+        </li>
+      </ul>
+    </div>
+    <hr style="margin: 0px; width: 100%; height: 1px; border: 0px; background-color: rgb(245, 245, 245); color: rgb(245, 245, 245);">
+    <div class="bottom_flink">
+      <a href="/friendLink" class="" target="_blank" style="font-size: 16px; color: black;">友情链接</a>
+      <ul class="bottom_flink_ul">
+        <li>
+          <a target="_blank" href="http://www.toolmall.com">
+            <span></span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://www.toolmall.com">
+            <span>土猫网</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p class="bottom_record">
+      浙ICP备10028454号-8&nbsp;&nbsp;&nbsp;&nbsp;© 版权所有 杭州巨星科技股份有限公司（股票代码：002444）
+      <span style="display: inline-block; vertical-align: baseline; margin-left: 20px; line-height: 20px;">
+        <a rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010402000529"
+          style="text-decoration: none;">
+          <img src="http://resource.toolmall.com/resource/toolmallPc/resources/home/ghs.png">
+          <span style="margin-left: 5px; color: rgb(153, 153, 153); font-size: 12px;">浙公网安备 33010402000529号</span>
+        </a>
+      </span>
+      <span style="display: inline-block; vertical-align: baseline; margin-left: 20px; line-height: 20px;">电信业务经营许可证：浙B2-20170133</span>
+    </p>
+    <p class="bottom_btmicon">
+      <a rel="nofollow" target="_blank" logo_size="124x47" logo_type="business" href="http://www.anquan.org/authenticate/cert/?site=www.toolmall.com&amp;at=business">
+        <img src="http://resource.toolmall.com/resource/toolmallPc/resources/home/hy_124x47_2.png" alt="安全联盟认证" style="border: medium none;">
+      </a>
+      <a rel="nofollow" target="_blank" id="_pingansec_bottomimagesmall_brand" href="http://si.trustutn.org/info?sn=769160322021143207777&amp;certType=1">
+        <img src="http://resource.toolmall.com/resource/toolmallPc/resources/home/hyrzsm_2.png">
+      </a>
+      <a rel="nofollow" href="https://ss.knet.cn/verifyseal.dll?sn=e15081133010059843qv4u000000&amp;ct=df&amp;a=1&amp;pa=0.6716742319522379"
+        target="_blank">
+        <img src="http://resource.toolmall.com/resource/toolmallPc/resources/home/cnniccx_2.png">
+      </a>
+      <a rel="nofollow" href="https://ss.knet.cn/verifyseal.dll?sn=e15081133010059843qv4u000000&amp;ct=df&amp;a=1&amp;pa=0.6716742319522379"
+        target="_blank">
+        <img src="http://resource.toolmall.com/resource/toolmallPc/resources/home/hywzrz_2.png">
+      </a>
+      <a rel="nofollow" target="_blank" id="_pingansec_bottomimagelarge_hangye" href="http://si.trustutn.org/info?sn=125160222020283652040&amp;certType=1"
+        style="border-right: none;">
+        <img src="http://resource.toolmall.com/resource/toolmallPc/resources/home/gongshang.png">
+      </a>
+    </p>
+  </div>
+
+
+  <script src="../js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="//resource.toolmall.com/resource/toolmallPc/resources/shop/js/jquery.lazyload.min.js?v=2017011701"></script>
+  <script>
+   var uid;
+   // 优先从url中取uid，若有则后面的统计请求中使用这个值
+   var url_uid;
+    function getQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]); return null;
+    }
+    url_uid = getQueryString("uid");
+    if(url_uid) {
+      window.localStorage.setItem("COUNT_UID", url_uid);
+    }
+    //打开页面发送统计
+    function countOpen() {
+      var params = {
+        url: window.location.href, // 当前静态页完整URL,
+        referUrl: document.referrer, // 来源URL,
+        pageType: 'b_pc_fanganguan', // pageType内容类型
+        contentID: 'b_pc_fanganguan', // contentID对应分类页或产品页ID
+      };
+
+      //创建异步对象
+      var xhr = new XMLHttpRequest();
+
+      var dataStr = '';
+      var url = 'http://www.toolmall.com/stat/open';
+
+      Object.keys(params).forEach(key => {
+        dataStr += key + '=' + params[key] + '&';
+      })
+      if (dataStr !== '') {
+        dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
+        url = url + '?' + dataStr;
+      }
+      //设置请求的类型及url
+      //post请求一定要添加请求头才行不然会报错
+      xhr.open('get', url);
+      xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+      xhr.onreadystatechange = function () {
+        // 这步为判断服务器是否正确响应
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          if (xhr.response) {
+            var json = JSON.parse(xhr.response);
+            uid = json.uid;
+          }
+        }
+      };
+      //发送请求
+      xhr.send(params);
+    }
+    countOpen();
+
+    function countClose() {
+      var parms = {
+        url: window.location.href, // 当前静态页完整URL,
+        referUrl: document.referrer, // 来源URL,
+        pageType: 'b_pc_fanganguan', // pageType内容类型
+        contentID: 'b_pc_fanganguan', // contentID对应分类页或产品页ID
+        uid: url_uid
+      };
+
+      //创建异步对象
+      var xhr = new XMLHttpRequest();
+      //设置请求的类型及url
+      var dataStr = '';
+      var url = 'http://www.toolmall.com/stat/close';
+
+      Object.keys(parms).forEach(key => {
+        dataStr += key + '=' + parms[key] + '&';
+      })
+      if (dataStr !== '') {
+        dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
+        url = url + '?' + dataStr;
+      }
+      //post请求一定要添加请求头才行不然会报错
+      xhr.open('get', url, false);
+      xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+      xhr.onreadystatechange = function () {
+        // 这步为判断服务器是否正确响应
+        if (xhr.readyState == 4 && xhr.status == 200) {
+
+        }
+      };
+      //发送请求
+      xhr.send(parms);
+    }
+
+    window.onbeforeunload = function (event) {
+      countClose();
+    }
+
+
+    $().ready(function () {
+      $(".lazyImage").lazyload({
+        threshold: 100,
+        effect: "fadeIn",
+        failure_limit: 10
+      });
+
+      $("#js_search_btn").click(function () {
+        if ($("#productSearchFormText").val()) {
+          location.href = '/search?keyword=' + $("#productSearchFormText").val();
+        }
+      });
+
+    });
+
+  </script>
+
+  <script>
+    (function () {
+      function addBaiduJs() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8c7f408de312dce1c8d87c36e276ba25";
+        document.body.appendChild(hm);
+      }
+      if (window.addEventListener) {                    //所有主流浏览器，除了 IE 8 及更早 IE版本
+        window.addEventListener("load", addBaiduJs);
+      } else if (window.attachEvent) {                  // IE 8 及更早 IE 版本
+        window.attachEvent("onload", addBaiduJs);
+      }
+    })();
+  </script>
+
+</body>
+
+</html>

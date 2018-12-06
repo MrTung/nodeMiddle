@@ -1,0 +1,294 @@
+html, body{
+  width: auto;
+  min-width: 1200px;
+}
+.tm-about-main{
+  line-height: 1.5;
+  background: #03021e;
+  background: -webkit-linear-gradient(left,  #03021e, #191831,  #03021e);
+  background: -o-linear-gradient(right,  #03021e, #191831,  #03021e);
+  background: -moz-linear-gradient(right,  #03021e, #191831,  #03021e);
+  background: linear-gradient(to right, #03021e, #191831,  #03021e);
+}
+.tm-about-part{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.tm-about-main .tm-part1, .tm-part1.fixed{
+  font-size: 18px;
+  color: black;
+  background: white;
+}
+.tm-part1.fixed{
+  display: none;
+}
+.tm-about-main .tm-part1 .tm-p2{
+  margin-top: 10px;
+}
+.tm-about-h2{
+  color: #ecba6e;
+  font-size: 30px;
+  line-height: 2;
+  font-weight: normal;
+}
+.tm-about-main .tm-part2, .tm-about-main .tm-part4{
+  /*background: #03021e url(//resource.toolmall.com/resource/business/bigimg/about/renshi_6.png) center center repeat-y;*/
+  color: white;
+}
+.tm-about-main .tm-p-small{
+  font-size: 16px;
+  padding-top: 8px;
+}
+.tm-about-main .tm-p-small-1{
+  margin-top: 10px;
+}
+.tm-about-main .tm-part2 em{
+  color: #ecba6e;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: bold;
+  padding: 0 3px;
+  line-height: 42px;
+}
+.tm-about-main .tm-has-line{
+  display: inline-block;
+  padding: 0 40px;
+  border-bottom: 1px solid #ecba6e;
+  font-size: 20px;
+}
+.tm-about-main .tm-has-line-out{
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+.tm-about-a1{
+  color: #2e92fc;
+  font-size: 15px;
+}
+.tm-about-main .tm-part2 .tm-about-h2{
+  padding-top: 6px;
+  padding-bottom: 10px;
+}
+.tm-about-main .tm-part3{
+  background: #1538aa url(//resource.toolmall.com/resource/business/bigimg/about/renshi_7.jpg) center center no-repeat;
+  padding-top: 12px;
+  padding-bottom: 5px;
+}
+.tm-about-main .tm-part3 .tm-about-h2{
+  padding-bottom: 10px;
+}
+.tm-about-beijing{
+  height: 270px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(//resource.toolmall.com/resource/business/bigimg/about/renshi_8.png) center top no-repeat;
+}
+.tm-youshi-item{
+  width: 271px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.tm-youshi-item-top{
+  position: absolute;
+  background: #0b5f95;
+  background: rgba(0,0,0,0.5);
+  left: 0;
+  right: 0;
+  width: 100%;
+  top:50%;
+  height: 70px;
+  margin-top: -35px;
+  color: white;
+}
+.tm-youshi-item-top .tm-p1{
+  font-size: 36px;
+  line-height: 42px;
+  padding-top: 5px;
+}
+.tm-youshi-item-top .tm-p2{
+  font-size: 12px;
+}
+.tm-part4 .tm-about-h2{
+  padding-bottom: 27px;
+  line-height: 1.5;
+}
+.tm-about-main .tm-part5{
+  background: #03021e url(//resource.toolmall.com/resource/business/bigimg/about/renshi_21.png) center bottom no-repeat;
+  color: white;
+}
+.tm-part5 .tm-p1{
+  font-size: 33px;
+  line-height: 2;
+}
+.tm-part5 .tm-p2{
+  font-size: 24px;
+  line-height: 2;
+}
+.tm-part5 .tm-p4{
+  font-size: 25px;
+  line-height: 2;
+  margin-top: 23px;
+}
+.tm-part5 .tm-p5{
+  font-size: 18px;
+  line-height: 34px;
+}
+.tm-b-item2-in{
+  width: 233px;
+  margin: auto;
+}
+.tm-b-items2{
+  padding-top: 70px;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #c9caca;
+}
+.tm-b-items2.tm-b-items2-2{
+  border-bottom:none;
+  padding-bottom: 25px;
+}
+.tm-about-main .tm-part6{
+  /*background: #03021e url(//resource.toolmall.com/resource/business/bigimg/about/renshi_6.png) center center repeat-y;*/
+  color: white;
+}
+.tm-part6 .tm-p1{
+  font-size: 24px;
+  line-height: 2;
+}
+.tm-customers{
+  background: white;
+  margin-top: 30px;
+}
+.tm-customers-title{
+  position: relative;
+  background: url(//resource.toolmall.com/resource/business/bigimg/about/about_title1.png) center top no-repeat;
+  text-align: center;
+  font-size: 24px;
+  line-height: 52px;
+  padding-top: 1px;
+  top: -6px;
+  color: #03021e;
+}
+.tm-part6 .tm-p2{
+  font-size: 24px;
+  line-height: 2;
+  margin-top: 30px;
+}
+.tm-part6 .tm-p3{
+  font-size: 16px;
+  color: #868685;
+}
+.tm-fangans{
+  margin-top: 30px;
+}
+.tm-fangans>.tm-col-third:nth-of-type(3n+1){
+  text-align: left;
+}
+.tm-fangans>.tm-col-third:nth-of-type(3n+2){
+  text-align: center;
+}
+.tm-fangans>.tm-col-third:nth-of-type(3n){
+  text-align: right;
+}
+.tm-fangan-item-in{
+  padding-bottom: 9px;
+}
+.tm-fangan-text{
+  display: none;
+}
+.tm-fangan-more{
+  color: #c71c1f;
+  font-size: 20px;
+  line-height: 45px;
+  background: #babac1;
+  background: -webkit-linear-gradient(left,  #03021e, #babac1,  #03021e); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right,  #03021e, #babac1,  #03021e); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right,  #03021e, #babac1,  #03021e); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #03021e, #babac1,  #03021e);
+}
+.tm-liucheng-pannel{
+  background: #d9d9dd;
+  color: #272636;
+  padding: 30px 65px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 26px;
+}
+.tm-liucheng{
+  text-align: left;
+  font-size: 18px;
+}
+.tm-liucheng .tm-title2{
+  color: #c71c1f;
+  font-size: 24px;
+  line-height: 2;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.tm-liucheng-body{
+  border-top: 1px solid #cecccd;
+}
+.tm-liucheng-row{
+  border-bottom: 1px solid #cecccd;
+  padding: 15px 0;
+}
+.lc-part{
+  display: inline-block;
+  vertical-align: middle;
+}
+.lc-part-3, .lc-part-5{
+  width: 220px;
+  margin-left: 4px;
+}
+.lc-part-0{
+  position: relative;
+  top: 59px;
+}
+.lc-part-2{
+  margin-left: 30px;
+}
+.lc-part-7{
+  margin-left: 4px;
+}
+.tm-wangdian-title{
+  font-size: 24px;
+  color: white;
+  margin-top: 20px;
+  position: relative;
+  top: 10px;
+}
+.tm-about-main .tm-part7{
+  background: #03021e;
+}
+.tm-about-main .tm-part-8{
+  color: black;
+  font-size: 20px;
+  background: #d9d9dd;
+  padding: 50px 0;
+}
+.tm-btm-item>img, .tm-btm-item>span{
+  vertical-align: middle;
+}
+.tm-about-main .tm-part1{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.js-nav-part{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.js-nav-part.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1200px;
+  z-index: 9;
+}
+.js-nav-part.fixed .tm-p2{
+}
+.js-nav-part img{
+  width: 70px;
+  height: 81px;
+}
