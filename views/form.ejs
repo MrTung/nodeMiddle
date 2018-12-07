@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>土猫网企业购_一站式阳光采购、企业采购、B2B采购网平台</title>
+
+  <%- include("./components/common.ejs") %>
+
+    <style>
+      .pageview {
+        width: 100%;
+        height: 100%;
+      }
+
+      .contentview {
+        width: 300px;
+        padding-bottom: 100px;
+        background-size: cover;
+        -moz-background-size: cover;
+      }
+
+      .contentview:after {
+        display: table;
+        content: " ";
+        clear: both;
+      }
+
+      .contentview_wide {
+        width: 1200px;
+        margin: auto;
+      }
+
+      .contentview_Picture {
+        float: left;
+        margin-top: 120px;
+      }
+
+      .ruleForm {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      .loginview {
+        width: 350px;
+        height: 420px;
+        /* margin: auto; */
+        text-align: center;
+        background-color: white;
+        float: right;
+        padding: 20px 30px;
+      }
+
+      .titletext {
+        font-size: 23px;
+      }
+
+      .loginbtn {
+        width: 100%;
+      }
+
+      .login_codeview {
+        /* display: flex;
+                flex-direction: row;
+                align-items: center; */
+        display: table;
+        width: 100%;
+        margin: auto;
+        content: " ";
+      }
+
+      .input_verfiy {
+        float: left;
+        width: 60%;
+      }
+
+      .imgview {
+        /* float: right; */
+        width: 20%;
+        margin-top: 3px;
+        height: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .input_verfiy_refresh {
+        padding-bottom: 7px;
+      }
+
+      .login_checkview {
+        /* display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 20px;
+                align-items: center; */
+        display: table;
+        width: 100%;
+        margin: auto;
+        content: " ";
+      }
+
+      .login_checkbox {
+        float: left;
+      }
+
+      .login_checkview>a {
+        float: right;
+      }
+
+      .row {
+        margin-top: 15px;
+      }
+
+    </style>
+
+</head>
+
+<body>
+
+  <div class="tm-root" id="app">
+    <div class="pageview">
+      <div class="contentview">
+        <el-form :model="ruleForm" ref="ruleForm" class="ruleForm">
+          <el-form-item prop="username">
+            <el-input v-model="ruleForm.username" placeholder="请输入缓存数据" autofocus="autofocus"></el-input>
+          </el-form-item>
+        </el-form>
+        <el-button class="loginbtn" type="primary" @click="submitForm()">缓存</el-button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var appVue = new Vue({
+      el: '#app',
+      mounted: function () {
+
+      },
+      data: function () {
+        return {
+          ruleForm: {
+            username: "",
+          },
+
+        };
+      },
+      methods: {
+        //验证表单
+        submitForm: function () {
+
+          axios.post('http://192.168.2.96:3000/save', {
+              userName: this.ruleForm.username,
+            })
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+
+        },
+
+        //验证验证码
+        checkcode: function (codestr) {
+
+        },
+
+        //刷新验证码
+        refleshImg: function () {},
+
+      }
+    })
+
+  </script>
+</body>
+
+</html>
