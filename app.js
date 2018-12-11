@@ -15,6 +15,14 @@ app.use(cors());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
+
+
+app.use(cors({
+  origin: 'http://dxw.toolmall.com',
+  credentials: true
+})); 
+
+
 var options = {
   "host": "127.0.0.1",
   "port": "6379",

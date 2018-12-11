@@ -1,5 +1,10 @@
 var Urls = require('../api/baseservice.js');
 
+var axios = require('axios');
+
+axios.defaults.withCredentials = true;
+axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';  //此处是增加的代码，设置请求头的类型
+
 /*
  * 执行静态化方法
  * */
@@ -15,6 +20,9 @@ exports.login = function (req, res) {
     date: new Date(),
     commonUrls: Urls
   })
+
+  // res.redirect(302, 'http://www.baidu.com');
+
 };
 
 
