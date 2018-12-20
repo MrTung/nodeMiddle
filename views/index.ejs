@@ -2,19 +2,26 @@
 <html>
 
 <head>
-  <title>
-    <%= title %>
-  </title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>土猫网企业购_一站式阳光采购、企业采购、B2B采购网平台</title>
+
+  <%- include("./components/common.ejs") %>
+
 </head>
 
 <body>
-  <h1>
-    <%= title %>
-  </h1>
-  <p>Welcome to
-    <%= title %>
-    <%= message %>
-  </p>
+  <%- include("./components/header.ejs") %>
+
+    <%- include("./components/search.ejs") %>
+      <% if (locals.userName) { %>
+        <h1>
+          <%= userName %>
+        </h1>
+        <p>Welcome to
+          <%= userName %>
+        </p>
+        <% } %>
+          <%- include("./components/footer.ejs") %>
+
 </body>
+
 </html>

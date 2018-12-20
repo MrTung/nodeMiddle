@@ -49,9 +49,12 @@ const toolmallHttp1 = function (request) {
  * 执行静态化方法
  * */
 exports.index = function (req, res) {
-  toolmallHttp(req).then((data) => {
-    res.send(data);
-  }).catch((err) => {
-    res.send(err);
-  });
+  if (req.session.USERINFO) {
+    res.render('index', {
+      userName: req.session.USERINFO.sessionUser.userName,
+      message: req.session.USERINFO.sessionUser.userId,
+    })
+  } else {
+    res.render('index')
+  }
 };

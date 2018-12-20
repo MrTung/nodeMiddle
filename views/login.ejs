@@ -251,33 +251,32 @@
                 return;
               }
               axios.defaults.withCredentials = true;
-              axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+              // axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
               //此处是增加的代码，设置请求头的类型
 
               this.$refs[formName].validate(function (valid) {
                 if (valid) {
                   let params = {
                     userName: me.ruleForm.username,
-                    password: 'e10adc3949ba59abbe56e057f20f883e',
+                    password: me.ruleForm.password,
                     type: 'password',
                     scope: 'server',
                     clientId: 'toolmall',
                     clientSecret: 'merchant-back'
                   };
-                  axios.post('<%=commonUrls.Loginurl%>', params).then(function (response) {
-                      if (response.code == "0000") {
-                        alert("登录成功， 3秒后跳转到首页");
-                        setTimeout(function () {
-                          location.href = "/";
-                        }, 3000);
+
+                  axios.post('http://dxw.toolmall.com:3000/loginApi', params).then(function (response) {
+                      console.log('12345');
+                      if (response.data.code == "0000") {
+                        location.href = "/";
                       } else {
-                        alert("登录失败， 请打开console查看response");
+                        alert("登录失败， 请打开console查看response222");
                         console.log(JSON.stringify(response));
                       }
                     })
                     .catch(function (error) {
-                      alert("登录失败， 请打开console查看response");
-                      console.log(JSON.stringify(response));
+                      alert("登录失败， 请打开console查看response111");
+                      console.log(JSON.stringify(error));
                     });
                 } else {
                   return false;

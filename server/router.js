@@ -16,6 +16,8 @@ routerItems.form = require('../routes/form.js');
 router.get('/', routerItems.index.index); //首页
 router.get('/login', routerItems.login.login);
 router.get('/loginout', routerItems.login.loginout);
+router.post('/loginApi', routerItems.login.loginApi);
+
 
 router.get('/form', routerItems.form.form);
 router.post('/save', routerItems.form.save);

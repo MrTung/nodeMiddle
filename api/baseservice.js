@@ -26,7 +26,7 @@ const Captchaurl = Baseurl + "/verify/captcha"
 const Checkcodeurl = Baseurl + "/verify/checkcode"
 
 /**
- * 登录链接
+ * 登录链接  此接口特殊,参数要追加在url后面
  */
 const Loginurl = Baseurl + "/merchant/back/users/login"
 

@@ -1,70 +1,77 @@
 <script>
-    function loginout() {
-        $.get("{{{Apis.loginOut}}}", function (result) {
-            if (result.code == "0000") {
-                alert("退出登录成功, 3秒后跳转到首页");
-                setTimeout(function () {
-                    window.location.href = "{{{config.main_host}}}/";
-                });
-            }
+  function loginout() {
+    $.get("{{{Apis.loginOut}}}", function (result) {
+      if (result.code == "0000") {
+        alert("退出登录成功, 3秒后跳转到首页");
+        setTimeout(function () {
+          window.location.href = "{{{config.main_host}}}/";
         });
-        return false;
-    }
+      }
+    });
+    return false;
+  }
+
 </script>
 
 <div class="tm-headtop">
-    <div class="tm-headtop_title">
-        <div class="tm-headtop_welcome">欢迎您进入土猫网企业采购网站</div>
-        <ul class="tm-headtop_ul">
-            <li id="js_global_top_user">
-                <span>您好，</span>
-                <a style="color:#0D76E7;cursor: pointer;" href="{{{config.main_host}}}/profile">{{userName}}</a>
-                <a rel="nofollow" onclick="javascript:loginout();return false;">退出登录</a>
-            </li>
-            <li id="js_global_top_user">
-                <span>您好，请</span>
-                <a style="color:#1b6dc5;cursor: pointer;" href="{{{config.main_host}}}/loginshow">登录</a>
-                <a rel="nofollow" href="{{{config.main_host}}}/regist">免费注册</a>
-            </li>
+  <div class="tm-headtop_title">
+    <div class="tm-headtop_welcome">欢迎您进入土猫网企业采购网站</div>
+    <ul class="tm-headtop_ul">
+      <% if (locals.userName) { %>
+        <li id="js_global_top_user">
+          <span>您好，</span>
+          <a style="color:#0D76E7;cursor: pointer;" href="{{{config.main_host}}}/profile">
+            <%= userName %>
+          </a>
+          <a rel="nofollow" onclick="javascript:loginout();return false;">退出登录</a>
+        </li>
+        <% } %>
 
+          <% if (!locals.userName) { %>
+            <li id="js_global_top_user">
+              <span>您好，请</span>
+              <a style="color:#1b6dc5;cursor: pointer;" href="{{{config.main_host}}}/loginshow">登录</a>
+              <a rel="nofollow" href="{{{config.main_host}}}/regist">免费注册</a>
+            </li>
+            <% } %>
 
-            <li class="tm-separator-li">
+              <li class="tm-separator-li">
                 <span class="tm-separator">|</span>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a target="_blank" href="{{{config.main_host}}}/">企业采购</a>
-            </li>
-            <li class="tm-separator-li">
+              </li>
+              <li class="tm-separator-li">
                 <span class="tm-separator">|</span>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a rel="nofollow" target="_blank" href="{{{config.main_host}}}/profile/enquiryorder">我的报价</a>
-            </li>
-            <li class="tm-separator-li">
+              </li>
+              <li class="tm-separator-li">
                 <span class="tm-separator">|</span>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a rel="nofollow" target="_blank" href="{{{config.main_host}}}/profile/purchaseorders">我的订单</a>
                 <!-- <a>我的订单</a> -->
-            </li>
-            <li class="tm-separator-li">
+              </li>
+              <li class="tm-separator-li">
                 <span class="tm-separator">|</span>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a rel="nofollow" target="_blank" href="{{{config.main_host}}}/profile">会员中心</a>
-            </li>
-            <li class="tm-separator-li">
+              </li>
+              <li class="tm-separator-li">
                 <span class="tm-separator">|</span>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a href="http://www.toolmall.com/" target="_blank">土猫网</a>
-            </li>
-            <li class="tm-separator-li">
+              </li>
+              <li class="tm-separator-li">
                 <span class="tm-separator">|</span>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a target="_blank" href="http://www.toolmall.com/app/dl.jhtm">手机土猫</a>
-            </li>
-        </ul>
-    </div>
+              </li>
+    </ul>
+  </div>
 </div>
