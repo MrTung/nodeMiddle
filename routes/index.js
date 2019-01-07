@@ -44,9 +44,8 @@ const toolmallHttp1 = function (request) {
     })
 }
 
-
 /*
- * 执行静态化方法
+ * 首页
  * */
 exports.index = function (req, res) {
   if (req.session.USERINFO) {
